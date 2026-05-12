@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import '../models/article_model.dart';
-import '../summary.dart';
+import '../../../data/models/article_model.dart';
+import '../../../summary.dart';
 
 class ArticleViewModel extends ChangeNotifier {
   final ArticleModel model;

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../models/article_model.dart';
+import '../../../data/models/article_model.dart';
 import '../view_models/article_view_model.dart';
 import 'article_page.dart';
-import '../summary.dart';
+import '../../../summary.dart';
 
 class ArticleView extends StatefulWidget {
   ArticleView({super.key});

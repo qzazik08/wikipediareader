@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:convert';
 import 'package:http/http.dart';
-import '../summary.dart';
+import '../../summary.dart';
 
 class ArticleModel {
   Future<Summary> getRandomArticleSummary() async {
