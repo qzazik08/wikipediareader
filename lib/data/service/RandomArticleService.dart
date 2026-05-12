@@ -1,0 +1,14 @@
+import 'dart:io';
+import 'dart:convert';
+import 'package:http/http.dart';
+import 'package:dio/dio.dart';
+
+class RandomArticleService {
+  final Dio _dio = Dio();
+  Future<Map<String, dynamic>> getRandomArticle() async {
+    final uri = Uri.https('en.wikipedia.org', '/api/rest_v1/page/random/summary');
+    final res = await _dio.get(uri.toString());
+
+    return res.data;
+  }
+}
