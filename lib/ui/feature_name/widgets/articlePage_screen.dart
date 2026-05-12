@@ -4,13 +4,13 @@ import '../view_models/article_view_model.dart';
 import '../widgets/article_page.dart';
 import '../../../summary.dart';
 
-class ArticleView extends StatefulWidget {
-  ArticleView({super.key});
+class ArticlePageScreen extends StatefulWidget {
+  ArticlePageScreen({super.key});
 
-  State<ArticleView> createState() => _ArticleViewState();
+  State<ArticlePageScreen> createState() => _ArticlePageScreenState();
 }
 
-class _ArticleViewState extends State<ArticleView> {
+class _ArticlePageScreenState extends State<ArticlePageScreen> {
   final viewModel = ArticleViewModel(RandomArticleRepository());
 
   @override
