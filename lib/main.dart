@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'ui/feature_name/views/article_view.dart';
+import 'ui/feature_name/widgets/articlePage_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -12,7 +12,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp( 
       debugShowCheckedModeBanner: false,
-      home: ArticleView(),
+      home: ArticlePageScreen(),
     );
   }
 }
