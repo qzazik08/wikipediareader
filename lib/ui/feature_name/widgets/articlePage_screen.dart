@@ -1,13 +1,21 @@
+import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import '../../../data/repository/RandomArticleRepository.dart';
 import '../view_models/article_view_model.dart';
 import '../widgets/article_page.dart';
 import '../../../summary.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ArticlePageScreen extends StatefulWidget {
   ArticlePageScreen({super.key});
 
   State<ArticlePageScreen> createState() => _ArticlePageScreenState();
+}
+
+class SummaryCubit extends Cubit<Summary>{
+  final RandomArticleRepository _repo;
+  CounterCubit(): super();
+  void getRandomArticle() => emit(repo.RandomArticleRepost);
 }
 
 class _ArticlePageScreenState extends State<ArticlePageScreen> {
@@ -18,6 +26,8 @@ class _ArticlePageScreenState extends State<ArticlePageScreen> {
     super.initState();
     viewModel.fetchArticle();
   }
+
+
 
   @override
   Widget build(BuildContext context) {
